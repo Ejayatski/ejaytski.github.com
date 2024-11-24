@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/background/back1.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow: hidden; 
+}
+
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    
+}
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: violet;
+    transition: width 0.3s ease, right 0.3s ease;
+    right: 0;
+}
+
+nav ul li a:hover::after, 
+nav ul li a.active::after {
+    width: 100%; /* Full underline on hover or active state */
+    right: 0;
+    left: 0;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: violet;
+}
+
+nav ul li a:hover {
+    color: violet;
+}
+#logo{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-size: 10px;
+    
+}
+#logos{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 16px;
+    font-family: cursive;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 76vh;
+    padding: 0 2rem;
+    transform: translateX(5%);
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: violet;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+#animated-text {
+    font-size: 1.8rem;
+    color: purple;
+    margin: 0.5rem 0;
+    border-right: 2px solid #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
+.content p:last-child {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.buttons {
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #121212;
+    background-color: #bd2eaa;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.5);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.btn-secondary:hover {
+    background-color: #cf4fba;
+    color: #ffffff;
+}
+
+.avatar img {
+    border-radius: 50%; 
+    border: 6px solid #e90ff1; 
+    box-shadow: 0 0 15px rgba(255, 0, 200, 0.623); 
+    width: 65%; 
+    height: 65%;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header nav ul {
+        justify-content: right;
+        padding: 20px 0px;
+        
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding-left: 2px;
+        padding-right: 10px;
+    }
+    
+    .hero {
+        gap: 10px;
+        height: 100vh;
+        padding: 0 10px;
+    }
+    
+    .content {
+        max-width: 80%;
+    }
+    
+    .content p {
+        font-size: 15px;
+        margin: 5px 0;
+        color: violet;
+        max-width: 70%;
+    }
+    
+    h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    
+    h2 {
+        font-size: 10px;
+        color: #ffffff;
+        margin: 2px 0;
+    }
+    #animated-text {
+        font-size: 17px;
+        margin: 2px 0;
+    }
+    
+    .content p:last-child {
+        font-size: 10px;
+    }
+    
+    .buttons {
+        margin-top: 7px;
+    }
+    
+    .btn {
+        padding: 7px 15px;
+        font-size: 10px;
+    }
+    
+    .avatar img {
+        border-radius: 50%; 
+        border: 6px solid #e90ff1; 
+        box-shadow: 0 0 15px rgba(199, 50, 167, 0.226); 
+        width: 65%; 
+        height: 65%;
+    }
+
+}
